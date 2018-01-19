@@ -23,4 +23,17 @@ describe('Bubble Sort', function() {
     bubbleSort([5, 8, 3]);
     expect(window.compare.calls.count()).toEqual(6);
   });
+
+  it('takes comparator functions', function() {
+    var array = [{ age: 4 }, { age: 8 }, { age: 2 }, { age: 9 }];
+    var comparator = function(a, b) {
+      return a.age > b.age ? 1 : -1;
+    };
+    expect(bubbleSort(array, comparator)).toEqual([
+      { age: 2 },
+      { age: 4 },
+      { age: 8 },
+      { age: 9 }
+    ]);
+  });
 });
