@@ -23,5 +23,3 @@ function mergeSort(array) {
   var orderedarray = merge(mergeSort(initial[0]), mergeSort(initial[1]));
   return orderedarray;
 }
-var xxx = [38, 27, 43, 3, 9, 82, 10];
-console.log(mergeSort(xxx));
